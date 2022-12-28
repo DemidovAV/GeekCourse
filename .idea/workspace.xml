@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25329376-1c90-4cac-857a-492e393d3d79" name="Changes" comment="git commit">
+      <change afterPath="$PROJECT_DIR$/lesson3/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson3/src/main/java/JavaMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson3/src/main/java/MyArrayDataException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson3/src/main/java/MyArraySizeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson3/src/main/java/MyException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +42,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "last_opened_file_path": "D:/For java/GeekCourses",
+    "last_opened_file_path": "D:/For java/lesson3",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -53,7 +60,7 @@
       <workItem from="1671812881119" duration="1359000" />
       <workItem from="1672222416326" duration="23000" />
       <workItem from="1672242097748" duration="674000" />
-      <workItem from="1672242787326" duration="61000" />
+      <workItem from="1672242787326" duration="679000" />
     </task>
     <task id="LOCAL-00001" summary="git commit">
       <created>1671813287589</created>
@@ -97,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672242732203</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="git commit">
+      <created>1672242917721</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1672242917721</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
