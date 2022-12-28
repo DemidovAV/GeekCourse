@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25329376-1c90-4cac-857a-492e393d3d79" name="Changes" comment="git commit">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="25329376-1c90-4cac-857a-492e393d3d79" name="Changes" comment="git commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,7 +33,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "openjdk-18",
-    "last_opened_file_path": "D:/For java/GeekCourses/lesson2"
+    "last_opened_file_path": "D:/For java/GeekCourses"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -48,6 +46,7 @@
       <updated>1671812879854</updated>
       <workItem from="1671812881119" duration="1359000" />
       <workItem from="1672222416326" duration="23000" />
+      <workItem from="1672242097748" duration="364000" />
     </task>
     <task id="LOCAL-00001" summary="git commit">
       <created>1671813287589</created>
@@ -56,7 +55,35 @@
       <option name="project" value="LOCAL" />
       <updated>1671813287589</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="git commit">
+      <created>1672242201053</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672242201053</updated>
+    </task>
+    <task id="LOCAL-00003" summary="git commit">
+      <created>1672242207310</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1672242207310</updated>
+    </task>
+    <task id="LOCAL-00004" summary="git commit">
+      <created>1672242289503</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1672242289503</updated>
+    </task>
+    <task id="LOCAL-00005" summary="git commit">
+      <created>1672242387306</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1672242387306</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
