@@ -2,11 +2,14 @@ import java.io.IOException;
 
 public class JavaMain {
     public static void countArray(String[][] array) {
-        if (array.length != 4 || array[0].length != 4) {
+        if (array.length != 4) {
             throw new MyArraySizeException();
         }
         int sum = 0;
         for (int i = 0; i < array.length; i++ ) {
+            if (array[i].length != 4) {
+                throw new MyArraySizeException();
+            }
             for (int j = 0; j < array[i].length; j++) {
                 try {
                     sum += Integer.parseInt(array[i][j]);
