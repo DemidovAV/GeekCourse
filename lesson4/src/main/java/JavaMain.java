@@ -9,8 +9,13 @@ public class JavaMain {
         System.out.println(arrayToArrayList(strings).toString());
 
         Box<Apple> appleBox1 = new Box<>(Apple.apples(5));
-        Box<Orange> orangeBox = new Box<>(Orange.oranges(8));
-        Box<Apple> appleBox2 = new Box<>(Apple.apples(5));
+        Box<Orange> orangeBox = new Box<>(new Orange(), new Orange(), new Orange());
+        Box<Apple> appleBox2 = new Box<>();
+        appleBox2.addFruit(new Apple(),5);
+        System.out.println(appleBox2.getFruitsInBox().size());
+        System.out.println("Сейчас в коробке appleBox2 " + appleBox2.getFruitsInBox().size() + " яблок");
+        System.out.println(appleBox2.getFruitsInBox());
+        System.out.println(appleBox1.getFruitsInBox());
 
         System.out.println("Вес коробки appleBox1: " + appleBox1.getWeight() + " кг.");
         System.out.println("Вес коробки appleBox2: " + appleBox2.getWeight() + " кг.");
@@ -23,7 +28,7 @@ public class JavaMain {
         System.out.println("Сейчас в коробке appleBox1 " + appleBox1.getFruitsInBox().size() + " яблок");
         System.out.println("Сейчас в коробке appleBox2 " + appleBox2.getFruitsInBox().size() + " яблок");
 
-        appleBox2.addFruit(5);
+        appleBox2.addFruit(new Apple(), 5);
         System.out.println("Сейчас в коробке appleBox2 " + appleBox2.getFruitsInBox().size() + " яблок");
 
 

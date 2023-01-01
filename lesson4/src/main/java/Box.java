@@ -1,11 +1,11 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Box<T extends Fruit> {
     private ArrayList<T> fruitsInBox;
-    private T fruit;
 
     public Box() {
-        fruitsInBox = new ArrayList<T>();
+        this.fruitsInBox = new ArrayList<T>();
     }
 
     public ArrayList<T> getFruitsInBox() {
@@ -14,6 +14,10 @@ public class Box<T extends Fruit> {
 
     public Box(ArrayList<T> fruitsInBox) {
         this.fruitsInBox = fruitsInBox;
+    }
+
+    public Box(T... fruits) {
+        this.fruitsInBox = new ArrayList<>(Arrays.asList(fruits));
     }
 
     public double getWeight() {
@@ -32,7 +36,7 @@ public class Box<T extends Fruit> {
         destBox.fruitsInBox.addAll(this.fruitsInBox);
         this.fruitsInBox.clear();
     }
-    public void addFruit(int numberOfFruits) {
+    public void addFruit(T fruit, int numberOfFruits) {
         for (int i = 0; i < numberOfFruits; i++) {
             fruitsInBox.add(fruit);
         }
