@@ -8,23 +8,37 @@ public class JavaMain {
         System.out.println(Arrays.toString(strings));
         System.out.println(arrayToArrayList(strings).toString());
 
-        Box<Apple> appleBox = new Box<>(apples(5));
+        Box<Apple> appleBox1 = new Box<>(Apple.apples(5));
+        Box<Orange> orangeBox = new Box<>(Orange.oranges(8));
+        Box<Apple> appleBox2 = new Box<>(Apple.apples(5));
+
+        System.out.println("Вес коробки appleBox1: " + appleBox1.getWeight() + " кг.");
+        System.out.println("Вес коробки appleBox2: " + appleBox2.getWeight() + " кг.");
+        System.out.println("Вес коробки orangeBox: " + orangeBox.getWeight() + " кг.");
+        System.out.println(appleBox1.compare(orangeBox));
+        System.out.println(appleBox1.compare(appleBox2));
+        appleBox1.throwFruits(appleBox2);
+        System.out.println("Вес коробки appleBox1: " + appleBox1.getWeight() + " кг.");
+        System.out.println("Вес коробки appleBox2: " + appleBox2.getWeight() + " кг.");
+        System.out.println("Сейчас в коробке appleBox1 " + appleBox1.getFruitsInBox().size() + " яблок");
+        System.out.println("Сейчас в коробке appleBox2 " + appleBox2.getFruitsInBox().size() + " яблок");
+
+        appleBox2.addFruit(5);
+        System.out.println("Сейчас в коробке appleBox2 " + appleBox2.getFruitsInBox().size() + " яблок");
+
+
     }
 
     public static void arrayElementsSwap(Object[] array, int a, int b) {
         if (a < 0 || b < 0 || a >= array.length || b >= array.length) {
-            throw new IllegalArgumentException("РџРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ СЌР»РµРјРµРЅС‚РѕРІ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ Р±РѕР»СЊС€Рµ -1 Рё Р±С‹С‚СЊ РјРµРЅСЊС€Рµ РґР»РёРЅС‹ РјР°СЃСЃРёРІР°!");
+            throw new IllegalArgumentException("Порядковый номер элементов должен быть больше -1 и быть меньше длины массива!");
         } else {
             Object temp = array[a];
             array[a] = array[b];
             array[b] = temp;
         }
     }
-    public static ArrayList<Object> arrayToArrayList(Object[] array) {
-        ArrayList<Object> result = new ArrayList<>();
-        for(int i = 0; i < array.length; i++) {
-            result.add(array[i]);
-        }
-        return result;
+    public static <T> ArrayList<T> arrayToArrayList(T[] array) {
+        return new ArrayList<>(Arrays.asList(array));
     }
 }

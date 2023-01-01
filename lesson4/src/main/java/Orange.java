@@ -9,7 +9,7 @@ public class Orange extends Fruit {
 
     public Orange() {
     }
-    public ArrayList<Orange> oranges(int a) {
+    public static ArrayList<Orange> oranges(int a) {
         ArrayList<Orange> oranges = new ArrayList<>();
         for (int i = 0; i < a; i++) {
             oranges.add(new Orange());
