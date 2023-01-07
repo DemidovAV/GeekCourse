@@ -4,7 +4,6 @@ import java.util.HashMap;
 public class YellowPages {
     private HashMap<String, ArrayList<String>> yellowPages;
 
-
     public YellowPages(HashMap<String, ArrayList<String>> yellowPages) {
         this.yellowPages = yellowPages;
     }
@@ -12,8 +11,6 @@ public class YellowPages {
     public HashMap<String, ArrayList<String>> getYellowPages() {
         return yellowPages;
     }
-
-
 
     public void add(String surname, String telephoneNumber) {
         if (!this.yellowPages.containsKey(surname)) {
