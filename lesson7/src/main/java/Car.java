@@ -1,12 +1,15 @@
 import java.util.concurrent.CyclicBarrier;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class Car implements Runnable {
     private static int CARS_COUNT;
-    private static int finishCounter = 0;
+    private static AtomicInteger finishCounter;
     private boolean winner = false;
 
     static {
         CARS_COUNT = 0;
+        finishCounter = new AtomicInteger(0);
     }
     private Race race;
     private int speed;
@@ -38,9 +41,8 @@ public class Car implements Runnable {
             for (int i = 0; i < race.getStages().size(); i++) {
                 race.getStages().get(i).go(this);
             }
-            if (finishCounter == 0) {
+            if (finishCounter.incrementAndGet() == 1) {
                 winner = true;
-                finishCounter++;
             }
             barrier.await();
         } catch (Exception e) {

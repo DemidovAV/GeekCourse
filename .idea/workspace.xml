@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25329376-1c90-4cac-857a-492e393d3d79" name="Changes" comment="git commit">
-      <change afterPath="$PROJECT_DIR$/lesson7/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson7/src/main/java/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson7/src/main/java/Lesson7Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson7/src/main/java/Race.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson7/src/main/java/Road.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson7/src/main/java/Stage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lesson7/src/main/java/Tunnel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson7/src/main/java/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Tunnel.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson7/src/main/java/Tunnel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,20 +38,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "openjdk-19",
-    "last_opened_file_path": "D:/For java/GeekBrains ВТБ (Java для молодых специалистов Банка ВТБ(ПАО))/Лекция 7/multithreading/multithreading",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "File.Encoding"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-19&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/For java/GeekCourses&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\For java\GeekCourses\lesson4\src\main\java" />
@@ -122,6 +116,8 @@
       <workItem from="1673089607641" duration="8596000" />
       <workItem from="1673182634146" duration="1566000" />
       <workItem from="1673347111118" duration="6583000" />
+      <workItem from="1673357915748" duration="40000" />
+      <workItem from="1673358523439" duration="911000" />
     </task>
     <task id="LOCAL-00001" summary="git commit">
       <created>1671813287589</created>
@@ -235,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673183608845</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="git commit">
+      <created>1673357936622</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1673357936622</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
