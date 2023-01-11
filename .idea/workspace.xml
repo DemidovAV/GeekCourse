@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="25329376-1c90-4cac-857a-492e393d3d79" name="Changes" comment="git commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson7/src/main/java/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Tunnel.java" beforeDir="false" afterPath="$PROJECT_DIR$/lesson7/src/main/java/Tunnel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +115,10 @@
       <workItem from="1673182634146" duration="1566000" />
       <workItem from="1673347111118" duration="6583000" />
       <workItem from="1673357915748" duration="40000" />
-      <workItem from="1673358523439" duration="911000" />
+      <workItem from="1673358523439" duration="1171000" />
+      <workItem from="1673362360976" duration="75000" />
+      <workItem from="1673362455437" duration="17000" />
+      <workItem from="1673455940641" duration="786000" />
     </task>
     <task id="LOCAL-00001" summary="git commit">
       <created>1671813287589</created>
@@ -238,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673357936622</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="git commit">
+      <created>1673359695534</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1673359695534</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
