@@ -5,22 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25329376-1c90-4cac-857a-492e393d3d79" name="Changes" comment="git commit">
+      <change afterPath="$PROJECT_DIR$/lesson7/src/main/java/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson7/src/main/java/Lesson7Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson7/src/main/java/Race.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson7/src/main/java/Road.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson7/src/main/java/Stage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson7/src/main/java/Tunnel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/.idea/git_toolbox_prj.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/Readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Car.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Lesson7Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Race.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Road.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Stage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Tunnel.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,10 +27,38 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="lesson7" />
+                    <option name="lastUsedInstant" value="1674490551" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1674490550" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -263,7 +283,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673359695534</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="git commit">
+      <created>1674490495081</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1674490495081</updated>
+    </task>
+    <task id="LOCAL-00020" summary="git commit">
+      <created>1674490710468</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1674490710468</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
