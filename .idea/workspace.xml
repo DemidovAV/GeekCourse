@@ -5,7 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25329376-1c90-4cac-857a-492e393d3d79" name="Changes" comment="git commit">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/.idea/git_toolbox_prj.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/Readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Lesson7Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Race.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Road.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Stage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Tunnel.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +59,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-19&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/For java/GeekCourses&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
@@ -90,6 +105,7 @@
         <item itemvalue="Application.Lesson6Main" />
         <item itemvalue="Application.lesson5Main" />
         <item itemvalue="Application.JavaMain" />
+        <item itemvalue="Application.Lesson7Main" />
       </list>
     </recent_temporary>
   </component>
@@ -119,6 +135,7 @@
       <workItem from="1673362360976" duration="75000" />
       <workItem from="1673362455437" duration="17000" />
       <workItem from="1673455940641" duration="786000" />
+      <workItem from="1674489752232" duration="359000" />
     </task>
     <task id="LOCAL-00001" summary="git commit">
       <created>1671813287589</created>
