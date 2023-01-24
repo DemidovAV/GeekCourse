@@ -2,9 +2,9 @@ import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
 public class Lesson7Main {
-    public static final int CARS_COUNT = 4;
+    public static final int CARS_COUNT = 6;
     public static void main(String[] args) {
-        CyclicBarrier cb = new CyclicBarrier(CARS_COUNT);
+        CyclicBarrier cb = new CyclicBarrier(CARS_COUNT + 1);
         System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Подготовка!!!");
         Race race = new Race(new Road(60), new Tunnel(), new Road(40));
         Car[] cars = new Car[CARS_COUNT];
@@ -18,10 +18,16 @@ public class Lesson7Main {
             cb.await();
             System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка началась!!!");
             cb.await();
+            cb.await();
+            System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка закончилась!!!");
+            for (Car contestant: cars) {
+                if(contestant.isWinner()) {
+                    System.out.println("Победитель: " + contestant.getName());
+                }
+            }
         } catch (InterruptedException | BrokenBarrierException e) {
             throw new RuntimeException(e);
         }
-        System.out.println("ВАЖНОЕ ОБЪЯВЛЕНИЕ >>> Гонка закончилась!!!");
     }
 }
 
