@@ -5,22 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25329376-1c90-4cac-857a-492e393d3d79" name="Changes" comment="git commit">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/.idea/git_toolbox_prj.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/Readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Car.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Lesson7Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Race.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Road.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Stage.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson7/src/main/java/Tunnel.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,10 +20,38 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="lesson7" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1674558388" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="lesson7" />
+                    <option name="lastUsedInstant" value="1674490551" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -136,6 +149,8 @@
       <workItem from="1673362455437" duration="17000" />
       <workItem from="1673455940641" duration="786000" />
       <workItem from="1674489752232" duration="359000" />
+      <workItem from="1674558410738" duration="665000" />
+      <workItem from="1674640072358" duration="616000" />
     </task>
     <task id="LOCAL-00001" summary="git commit">
       <created>1671813287589</created>
