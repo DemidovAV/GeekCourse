@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25329376-1c90-4cac-857a-492e393d3d79" name="Changes" comment="git commit">
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_01_2023_14_06_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_01_2023_14_06_[Changes]1/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_01_2023_14_06__Changes_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson8/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lesson8/src/main/java/Lesson8Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="lesson7" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,6 +43,10 @@
             <RecentBranchesForRepo>
               <option name="branches">
                 <list>
+                  <RecentBranch>
+                    <option name="branchName" value="lesson8" />
+                    <option name="lastUsedInstant" value="1674646522" />
+                  </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="master" />
                     <option name="lastUsedInstant" value="1674558388" />
@@ -83,7 +94,7 @@
       <recent name="D:\For java\GeekCourses\lesson4\src\main\java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Lesson7Main">
+  <component name="RunManager" selected="Application.Lesson8Main">
     <configuration name="JavaMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="JavaMain" />
       <module name="lesson4" />
@@ -105,6 +116,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Lesson8Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lesson8Main" />
+      <module name="lesson8" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="lesson5Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="lesson5Main" />
       <module name="lesson5" />
@@ -114,11 +132,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Lesson8Main" />
         <item itemvalue="Application.Lesson7Main" />
         <item itemvalue="Application.Lesson6Main" />
         <item itemvalue="Application.lesson5Main" />
         <item itemvalue="Application.JavaMain" />
-        <item itemvalue="Application.Lesson7Main" />
       </list>
     </recent_temporary>
   </component>
@@ -150,7 +168,8 @@
       <workItem from="1673455940641" duration="786000" />
       <workItem from="1674489752232" duration="359000" />
       <workItem from="1674558410738" duration="665000" />
-      <workItem from="1674640072358" duration="616000" />
+      <workItem from="1674640072358" duration="6004000" />
+      <workItem from="1674664223056" duration="1010000" />
     </task>
     <task id="LOCAL-00001" summary="git commit">
       <created>1671813287589</created>
@@ -278,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673359695534</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="git commit">
+      <created>1674646414298</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1674646414298</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
