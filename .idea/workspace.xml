@@ -22,7 +22,8 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="lesson7" />
+
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -37,12 +38,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="lesson7" />
-                    <option name="lastUsedInstant" value="1674490551" />
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1674558388" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1674490550" />
+                    <option name="branchName" value="lesson7" />
+                    <option name="lastUsedInstant" value="1674490551" />
                   </RecentBranch>
                 </list>
               </option>
@@ -149,7 +150,8 @@
       <workItem from="1673362455437" duration="17000" />
       <workItem from="1673455940641" duration="786000" />
       <workItem from="1674489752232" duration="359000" />
-      <workItem from="1674553646599" duration="3696000" />
+      <workItem from="1674558410738" duration="665000" />
+      <workItem from="1674640072358" duration="616000" />
     </task>
     <task id="LOCAL-00001" summary="git commit">
       <created>1671813287589</created>
