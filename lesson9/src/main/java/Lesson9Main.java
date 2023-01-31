@@ -12,6 +12,14 @@ public class Lesson9Main {
     public static void main(String[] args) {
         Class<MyClass> myClass = MyClass.class;
         Annotation[] myClassAnno = myClass.getAnnotations();
+        try {
+            connect();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            disconnect();
+        }
 
     }
 
