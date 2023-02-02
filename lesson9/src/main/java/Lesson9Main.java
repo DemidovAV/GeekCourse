@@ -1,8 +1,6 @@
-import java.lang.annotation.Annotation;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.HashMap;
-import java.util.List;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.lang.reflect.*;
@@ -53,7 +51,7 @@ public class Lesson9Main {
     public static void connect() throws SQLException {
         try {
             Class.forName("org.sqlite.JDBC");
-            connection = DriverManager.getConnection("jdbc:sqlite:main.db");
+            connection = DriverManager.getConnection("jdbc:sqlite:myDB.db");
             statement = connection.createStatement();
         } catch (ClassNotFoundException | SQLException e) {
             throw new SQLException("Can't connect");
