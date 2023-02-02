@@ -21,6 +21,10 @@ public class Lesson9Main {
         }
     }
 
+    public static void addGame(Game game) throws SQLException {
+        StringBuilder request = new StringBuilder("INSERT INTO ");
+        request.append(game.getClass().getAnnotation(Table.class).title() + " (");
+    }
     public static void createTable(Class myClass) throws SQLException {
         Map<Class, String> sqlClasses = new HashMap<>();
         sqlClasses.put(String.class, "TEXT");
@@ -31,14 +35,14 @@ public class Lesson9Main {
         if (!myClass.isAnnotationPresent(Table.class)) {
             throw new RuntimeException("No table found");
         }
-        StringBuilder request = new StringBuilder("CREATE TABLE IF NOT EXISTS ");
+        StringBuilder request = new StringBuilder("CREATE TABLE ");
         request.append(((Table) myClass.getAnnotation(Table.class)).title() + " (");
         Field[] fields = Game.class.getDeclaredFields();
-        for(Field o: fields) {
-            if(o.isAnnotationPresent(Column.class)) {
-                request.append(o.getName())
+        for(int i = 0; i < fields.length; i++) {
+            if(fields[i].isAnnotationPresent(Column.class)) {
+                request.append(fields[i].getName())
                         .append(" ")
-                        .append(sqlClasses.get(o.getType()))
+                        .append(sqlClasses.get(fields[i].getType()))
                         .append(", ");
             }
         }

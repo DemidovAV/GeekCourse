@@ -10,9 +10,13 @@ public class Game {
     @Column
     GameType type;
 
-    public Game(int id, String gameName, GameType type) {
+    @Column
+    int PG;
+
+    public Game(int id, String gameName, GameType type, int PG) {
         this.id = id;
         this.gameName = gameName;
         this.type = type;
+        this.PG = PG;
     }
 }
