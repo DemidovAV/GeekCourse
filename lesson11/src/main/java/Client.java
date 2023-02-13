@@ -13,6 +13,16 @@ public class Client {
     @Column
     private String name;
 
+    @ManyToMany
+    @JoinTable (name = "clients_products",
+                joinColumns = @JoinColumn(name = "client_id"),
+                inverseJoinColumns = @JoinColumn(name = "product_id"))
+    private List<Product> products;
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -26,4 +36,9 @@ public class Client {
     public Client() {}
 
     public Client(String name) {this.name = name;}
+
+    @Override
+    public String toString() {
+        return name;
+    }
 }

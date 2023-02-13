@@ -1,4 +1,5 @@
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "products")
@@ -13,6 +14,16 @@ public class Product {
 
     @Column
     private int price;
+
+    @ManyToMany
+    @JoinTable (name = "clients_products",
+            joinColumns = @JoinColumn(name = "product_id"),
+            inverseJoinColumns = @JoinColumn(name = "client_id"))
+    private List<Client> clients;
+
+    public List<Client> getClients() {
+        return clients;
+    }
 
     public void setId(int id) {this.id = id;}
 
@@ -31,4 +42,9 @@ public class Product {
         this.price = price;
     }
     public Product() {}
+
+    @Override
+    public String toString() {
+        return title + " -- price is: " + price + " rub.";
+    }
 }
