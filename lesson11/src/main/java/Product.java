@@ -1,50 +1,31 @@
 import javax.persistence.*;
+import org.hibernate.annotations.Cascade;
 import java.util.List;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
+@Data
 @Table(name = "products")
+@NoArgsConstructor
 public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column
+    @Column (name = "id")
     private int id;
 
-    @Column
+    @Column (name = "title")
     private String title;
 
-    @Column
+    @Column (name = "price")
     private int price;
 
-    @ManyToMany
-    @JoinTable (name = "clients_products",
-            joinColumns = @JoinColumn(name = "product_id"),
-            inverseJoinColumns = @JoinColumn(name = "client_id"))
-    private List<Client> clients;
+    @OneToMany(mappedBy = "product", fetch = FetchType.EAGER)
+    private List<Order> orders;
 
-    public List<Client> getClients() {
-        return clients;
-    }
-
-    public void setId(int id) {this.id = id;}
-
-    public void setTitle(String title) {this.title = title;}
-
-    public void setPrice(int price) {this.price = price;}
-
-    public int getId() {return id;}
-
-    public String getName() {return title;}
-
-    public int getPrice() {return price;}
-
-    public Product(String title, int price) {
-        this.title = title;
-        this.price = price;
-    }
-    public Product() {}
 
     @Override
     public String toString() {
-        return title + " -- price is: " + price + " rub.";
+        return title;
     }
 }
