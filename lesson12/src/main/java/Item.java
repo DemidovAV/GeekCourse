@@ -1,8 +1,7 @@
-import java.util.List;
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+
 
 import javax.persistence.*;
 

@@ -1,13 +1,20 @@
 import java.io.IOException;
-import java.util.*;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
+import java.util.concurrent.BrokenBarrierException;
+import java.util.concurrent.CyclicBarrier;
+
+
 public class Main {
     public static void main(String[] args) {
         try {
-            SessionStarter.startSession();
-        } catch (IOException e) {
+            SessionOperations.startSession();
+            CyclicBarrier cb = new CyclicBarrier(9);
+            for (int i = 0; i < 8; i++) {
+                System.out.println("Запуск потока №" + (i+1));
+                new Thread(new MyStream(cb)).start();
+            }
+            cb.await();
+            SessionOperations.countValSum();
+        } catch (IOException | InterruptedException | BrokenBarrierException e) {
             e.printStackTrace();
         }
     }
