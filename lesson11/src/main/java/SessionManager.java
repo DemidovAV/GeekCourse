@@ -1,55 +1,60 @@
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import org.hibernate.annotations.Cascade;
-import javax.persistence.Query;
-import java.util.*;
 
-public class Lesson11Main {
-    public static void main(String[] args) {
-        SessionFactory factory = new Configuration()
-                .configure("hibernate.cfg.xml")
-                .addAnnotatedClass(Product.class)
-                .addAnnotatedClass(Client.class)
-                .addAnnotatedClass(Order.class)
-                .buildSessionFactory();
-        Session session = null;
-        Scanner sc = new Scanner(System.in);
-        Map<String, Integer> products = new HashMap<>();
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class SessionManager {
+
+    private Map<String, Integer> products = new HashMap<>();
+    private List<String> clients = Arrays.asList("John", "Max");
+
+    private SessionFactory factory = new Configuration()
+                                    .configure("hibernate.cfg.xml")
+                                    .buildSessionFactory();
+    private Session session;
+
+    public void startSession() {
         products.put("MP3_Player", 5600);
         products.put("Teapot", 2000);
         products.put("Cell_Phone", 8700);
         products.put("Mixer", 3500);
         products.put("TV", 25400);
-        List<String> clients = Arrays.asList("John", "Max");
-        List<String> commandsList = new ArrayList<>();
-        commandsList.add("/addClient имя_покупателя --- добавить покупателя в базу данных");
-        commandsList.add("/addProduct название_товара стоимость_товара --- добавить товар в базу данных");
-        commandsList.add("/buy имя_покупателя название_товара --- организовать возможность покупки товара");
-        commandsList.add("/showProductsByClient имя_покупателя --- посмотреть какие товары покупал клиент");
-        commandsList.add("/findClientsByProductTitle название_товара --- какие клиенты купили определенный товар");
-        commandsList.add("/removeClient имя_элемента ---  удалить из базы покупателей");
-        commandsList.add("/removeProduct имя_элемента --- удалить из базы товары");
-        commandsList.add("/exit --- выход");
         try {
+            String sql = Files.lines(Paths.get("D:\\For java\\GeekCourses\\lesson11\\src\\main\\java\\sql-request.sql")).collect(Collectors.joining(" "));
             session = factory.getCurrentSession();
-//            for (String key: products.keySet()) {
-//                session = factory.getCurrentSession();
-//                Product product = new Product();
-//                product.setTitle(key);
-//                product.setPrice(products.get(key));
-//                session.beginTransaction();
-//                session.save(product);
-//                session.getTransaction().commit();
-//            }
-//
-//            for (String s: clients) {
-//                    session = factory.getCurrentSession();
-//                    Client client = new Client();
-//                    client.setName(s);
-//                    session.beginTransaction();
-//                    session.save(client);
-//                    session.getTransaction().commit();
+            session.beginTransaction();
+            session.createNativeQuery(sql).executeUpdate();
+            session.getTransaction().commit();
+            for (String key: products.keySet()) {
+                session = factory.getCurrentSession();
+                Product product = new Product();
+                product.setTitle(key);
+                product.setPrice(products.get(key));
+                session.beginTransaction();
+                session.save(product);
+                session.getTransaction().commit();
+            }
+            for (String s: clients) {
+                session = factory.getCurrentSession();
+                Client client = new Client();
+                client.setName(s);
+                session.beginTransaction();
+                session.save(client);
+                session.getTransaction().commit();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void startDBManagement() {
+            Scanner sc = new Scanner(System.in);
+            session = factory.getCurrentSession();
             System.out.println("Waiting for command \nFor list of commands type: /commandList");
             while (sc.hasNext()) {
                 try {
@@ -59,7 +64,8 @@ public class Lesson11Main {
                     if (commandArr.length == 0) System.out.println("Unknown command. Waiting for proper command.");
                     switch (commandArr[0]) {
                         case "/commandList" -> {
-                            for (String s : commandsList) {
+                            CommandList commandList = new CommandList();
+                            for (String s : commandList.getCommandsList()) {
                                 System.out.println(s);
                             }
                             System.out.println("Input command");
@@ -174,16 +180,16 @@ public class Lesson11Main {
                         }
                         default -> System.out.println("Unknown command. Waiting for proper command.");
                     }
-                } catch(ArrayIndexOutOfBoundsException e) {
+                } catch (ArrayIndexOutOfBoundsException e) {
                     System.out.println("Wrong command, waiting for correct input.");
                 }
             }
+        }
 
-
-        } finally {
-            factory.close();
+    public void stopSession() {
+        factory.close();
+        if (session != null) {
             session.close();
         }
     }
-
 }
