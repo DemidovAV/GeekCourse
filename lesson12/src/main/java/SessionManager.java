@@ -7,9 +7,9 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.stream.Collectors;
 
-public class SessionOperations {
+public class SessionManager {
 
-    public static void startSession() throws IOException {
+    public void startSession() throws IOException {
         System.out.println("Подготовка таблицы items");
         SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
@@ -37,7 +37,7 @@ public class SessionOperations {
         }
     }
 
-    public static void countValSum() {
+    public void countValSum() {
         System.out.println("counting sum of 'val':");
         SessionFactory factory = new Configuration()
                 .configure("hibernate.cfg.xml")
