@@ -1,5 +1,9 @@
+package components;
+
 import javax.persistence.*;
-import org.hibernate.annotations.Cascade;
+
+import components.Order;
+
 import java.util.List;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,3 +1,6 @@
+package session;
+
+import components.Item;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -16,7 +19,7 @@ public class SessionManager {
                 .buildSessionFactory();
         Session session = null;
         try {
-            String sql = Files.lines(Paths.get("D:\\For java\\GeekCourses\\lesson12\\src\\main\\java\\starting-script.sql")).collect(Collectors.joining(" "));
+            String sql = Files.lines(Paths.get("D:\\For java\\GeekCourses\\lesson12\\src\\main\\java\\session\\starting-script.sql")).collect(Collectors.joining(" "));
             session = factory.getCurrentSession();
             session.beginTransaction();
             session.createNativeQuery(sql).executeUpdate();

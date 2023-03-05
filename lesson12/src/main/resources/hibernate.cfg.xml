@@ -20,6 +20,6 @@
 
         <!--<property name="hibernate.hbm2ddl.auto">none</property>-->
 
-        <mapping class="Item"/>
+        <mapping class="components.Item"/>
     </session-factory>
 </hibernate-configuration>

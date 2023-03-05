@@ -1,3 +1,5 @@
+package components;
+
 import javax.persistence.*;
 import org.hibernate.annotations.Cascade;
 import java.util.List;

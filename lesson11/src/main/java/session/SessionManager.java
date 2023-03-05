@@ -1,3 +1,8 @@
+package session;
+
+import components.Client;
+import components.Order;
+import components.Product;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -25,7 +30,7 @@ public class SessionManager {
         products.put("Mixer", 3500);
         products.put("TV", 25400);
         try {
-            String sql = Files.lines(Paths.get("D:\\For java\\GeekCourses\\lesson11\\src\\main\\java\\sql-request.sql")).collect(Collectors.joining(" "));
+            String sql = Files.lines(Paths.get("D:\\For java\\GeekCourses\\lesson11\\src\\main\\java\\session\\sql-request.sql")).collect(Collectors.joining(" "));
             session = factory.getCurrentSession();
             session.beginTransaction();
             session.createNativeQuery(sql).executeUpdate();
@@ -83,7 +88,7 @@ public class SessionManager {
                             order.setPrice(product.getPrice());
                             session.save(order);
                             session.getTransaction().commit();
-                            System.out.println("New order id = " + order.getId() + " created. Client: " + client.getName() + ", Product: " + product.getTitle() + ", Price: "
+                            System.out.println("New order id = " + order.getId() + " created. components.Client: " + client.getName() + ", components.Product: " + product.getTitle() + ", Price: "
                                     + order.getPrice());
                         }
                         case "/showProductsByClient" -> {
@@ -128,7 +133,7 @@ public class SessionManager {
                                 Client deleteClient = (Client) session.createQuery("FROM Client WHERE name = :name").
                                         setParameter("name", commandArr[1]).getSingleResult();
                                 session.delete(deleteClient);
-                                System.out.println("Client " + deleteClient.getName() + " has been deleted from database.");
+                                System.out.println("components.Client " + deleteClient.getName() + " has been deleted from database.");
                             } catch (NullPointerException e) {
                                 System.out.println("No such client int database.");
                             } finally {
@@ -143,7 +148,7 @@ public class SessionManager {
                                 Product deleteProduct = (Product) session.createQuery("FROM Product WHERE title = :title").
                                         setParameter("title", commandArr[1]).getSingleResult();
                                 session.delete(deleteProduct);
-                                System.out.println("Product " + deleteProduct.getTitle() + " has been deleted from database.");
+                                System.out.println("components.Product " + deleteProduct.getTitle() + " has been deleted from database.");
                             } catch (IllegalArgumentException e) {
                                 System.out.println("No such product in database");
                             } finally {
@@ -158,7 +163,7 @@ public class SessionManager {
                                 Client newClient = new Client();
                                 newClient.setName(commandArr[1]);
                                 session.save(newClient);
-                                System.out.println("Client " + newClient.getName() + " was added to database.");
+                                System.out.println("components.Client " + newClient.getName() + " was added to database.");
                                 System.out.println("Waiting for command:");
                             } finally {
                                 session.getTransaction().commit();
@@ -172,7 +177,7 @@ public class SessionManager {
                                 newProduct.setTitle(commandArr[1]);
                                 newProduct.setPrice(Integer.parseInt(commandArr[2]));
                                 session.save(newProduct);
-                                System.out.println("Product " + newProduct.getTitle() + " was added to database.");
+                                System.out.println("components.Product " + newProduct.getTitle() + " was added to database.");
                                 System.out.println("Waiting for command:");
                             } finally {
                                 session.getTransaction().commit();

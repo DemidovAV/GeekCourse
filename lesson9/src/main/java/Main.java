@@ -1,15 +1,9 @@
 import java.sql.*;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.lang.reflect.*;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 public class Main {
-    static Statement statement;
-    static Connection connection;
-    static PreparedStatement preparedStatement;
+    public static Statement statement;
+    public static Connection connection;
+    public static PreparedStatement preparedStatement;
 
 
     public static void main(String[] args) {

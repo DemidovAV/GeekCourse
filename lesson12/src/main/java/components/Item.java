@@ -1,3 +1,4 @@
+package components;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
