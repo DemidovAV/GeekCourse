@@ -5,16 +5,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd">
-    <context:component-scan base-package="java" />
-    <bean id="colorCameraRoll" class="ColorCameraRoll" />
-    <bean id="blackAndWhiteCameraRoll" class="BlackAndWhiteCameraRoll" />
-    <bean id="blackAndWhiteCamera" class="Camera">
+    <context:component-scan base-package="lesson13Example" />
+
+    <bean id="oldCamera" class="lesson13Example.CameraImpl">
         <property name="cameraRoll" ref="blackAndWhiteCameraRoll"/>
     </bean>
-    <bean id="colorCamera" class="Camera">
+    <bean id="newCamera" class="lesson13Example.CameraImpl">
         <property name="cameraRoll" ref="colorCameraRoll"/>
     </bean>
-
 
 </beans>
