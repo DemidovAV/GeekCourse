@@ -1,8 +1,9 @@
-package lesson13Example;
+package lesson13Example.beans;
 
 import org.springframework.stereotype.Component;
 
 @Component("blackAndWhiteCameraRoll")
+@UnproducableCameraRoll(usingCameraRollClass = ColorCameraRoll.class)
 public class BlackAndWhiteCameraRoll implements CameraRoll{
     @Override
     public void makeAShot() {

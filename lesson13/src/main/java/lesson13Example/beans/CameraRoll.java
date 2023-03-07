@@ -1,4 +1,4 @@
-package lesson13Example;
+package lesson13Example.beans;
 
 public interface CameraRoll {
     void makeAShot();
