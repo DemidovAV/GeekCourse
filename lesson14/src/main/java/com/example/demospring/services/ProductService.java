@@ -17,12 +17,22 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public List<Product> getAllProductsFiltered(String filter) {
-        List<Product> productList = productRepository.finAll();
+    public List<Product> getAllProductsFiltered(String filter, Integer min, Integer max) {
+        List<Product> preFilteredList = productRepository.finAll();
+        List<Product> afterFilteredList;
         if (filter != null) {
-            return productList.stream().filter(p-> p.getTitle().toLowerCase().contains(filter.toLowerCase())).collect(Collectors.toList());
+            afterFilteredList = preFilteredList.stream().filter(p-> p.getTitle().toLowerCase().contains(filter.toLowerCase())).collect(Collectors.toList());
         } else {
-            return productList;
+            afterFilteredList = preFilteredList;
+        }
+        if (min != null && max != null) {
+            return afterFilteredList.stream().filter(product -> product.getPrice() >= min && product.getPrice() <= max).collect(Collectors.toList());
+        } else if (min == null && max != null) {
+            return afterFilteredList.stream().filter(product -> product.getPrice() <= max).collect(Collectors.toList());
+        } else if (min != null && max == null) {
+            return afterFilteredList.stream().filter(product -> product.getPrice() >= min).collect(Collectors.toList());
+        } else {
+            return afterFilteredList;
         }
     }
 

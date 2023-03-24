@@ -20,14 +20,14 @@
             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
             <input th:value="${filter != null} ? ${filter}" name="filter" placeholder="по названию" class="form-control"/>
         </div>
-<!--        <div style="margin-bottom: 25px" class="input-group">-->
-<!--            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>-->
-<!--            <input th:value="${min != null} ? ${min}" name="min" placeholder="стоимость от" class="form-control"/>-->
-<!--        </div>-->
-<!--        <div style="margin-bottom: 25px" class="input-group">-->
-<!--            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>-->
-<!--            <input th:value="${max != null} ? ${max}" name="max" placeholder="стоимость до" class="form-control"/>-->
-<!--        </div>-->
+        <div style="margin-bottom: 25px" class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input th:value="${min != null} ? ${min}" name="min" placeholder="стоимость от" class="form-control"/>
+        </div>
+        <div style="margin-bottom: 25px" class="input-group">
+            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+            <input th:value="${max != null} ? ${max}" name="max" placeholder="стоимость до" class="form-control"/>
+        </div>
         <div style="margin-top: 10px" class="form-group">
             <div class="col-sm-6 controls">
                 <button type="submit" class="btn btn-primary">Фильтровать</button>

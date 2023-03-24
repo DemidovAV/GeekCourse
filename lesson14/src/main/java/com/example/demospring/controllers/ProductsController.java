@@ -19,20 +19,29 @@ public class ProductsController {
     }
 
     @GetMapping
-    public String showProductList(Model model, @RequestParam(value = "filter", required = false) String filter) {
+    public String showProductList(Model model,
+                                  @RequestParam(value = "filter", required = false) String filter,
+                                  @RequestParam(value = "min", required = false) Integer min,
+                                  @RequestParam(value = "max", required = false) Integer max) {
         Product product = new Product();
-        model.addAttribute("products", productService.getAllProductsFiltered(filter));
+        model.addAttribute("products", productService.getAllProductsFiltered(filter, min, max));
         model.addAttribute("product", product);
         model.addAttribute("filter", filter);
+        model.addAttribute("filter", min);
+        model.addAttribute("filter", max);
         return "products";
     }
     @PostMapping
     public String showProductListReset(Model model) {
         Product product = new Product();
         String filter = null;
-        model.addAttribute("products", productService.getAllProductsFiltered(filter));
+        Integer min = null;
+        Integer max = null;
+        model.addAttribute("products", productService.getAllProductsFiltered(filter, min, max));
         model.addAttribute("product", product);
         model.addAttribute("filter", filter);
+        model.addAttribute("filter", min);
+        model.addAttribute("filter", max);
         return "products";
     }
     @GetMapping("/edit/{id}")
