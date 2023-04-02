@@ -1,4 +1,4 @@
-package com.example.demospring.entities;
+package com.example.lesson15.entities;
 
 public class Product {
     private Long id;

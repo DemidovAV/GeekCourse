@@ -1,9 +1,10 @@
-package com.example.demospring.repositories;
+package com.example.lesson15.repositories;
 
-import com.example.demospring.entities.Product;
-import jakarta.annotation.PostConstruct;
+import com.example.lesson15.entities.Product;
+
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
 import java.util.ArrayList;
 import java.util.List;
 

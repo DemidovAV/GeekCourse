@@ -1,8 +1,8 @@
-package com.example.demospring.controllers;
+package com.example.lesson15.controllers;
 
 
-import com.example.demospring.entities.Product;
-import com.example.demospring.services.ProductService;
+import com.example.lesson15.entities.Product;
+import com.example.lesson15.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
