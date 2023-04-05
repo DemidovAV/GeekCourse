@@ -18,8 +18,12 @@ public class Item {
     @Column(name = "title")
     private String title;
 
-    public Item(Long id, String title) {
+    @Column
+    private Long cost;
+
+    public Item(Long id, String title, Long cost) {
         this.id = id;
         this.title = title;
+        this.cost = cost;
     }
 }
