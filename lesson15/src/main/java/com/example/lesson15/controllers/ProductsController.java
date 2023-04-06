@@ -1,12 +1,19 @@
 package com.example.lesson15.controllers;
 
 
+import com.example.lesson15.entities.Item;
 import com.example.lesson15.entities.Product;
+import com.example.lesson15.repositories.specifications.ItemSpecs;
+import com.example.lesson15.repositories.specifications.ProductSpecs;
 import com.example.lesson15.services.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("/products")
@@ -24,11 +31,24 @@ public class ProductsController {
                                   @RequestParam(value = "min", required = false) Integer min,
                                   @RequestParam(value = "max", required = false) Integer max) {
         Product product = new Product();
-        model.addAttribute("products", productService.getAllProductsFiltered(filter, min, max));
-        model.addAttribute("product", product);
+        Specification<Product> spec = Specification.where(null);
+        if(min != null) {
+            spec = spec.and(ProductSpecs.priceGreaterThanOrEquals(min));
+        }
+        if(filter != null) {
+            spec = spec.and((ProductSpecs.titleContains(filter)));
+        }
+        if(max != null) {
+            spec = spec.and(ProductSpecs.priceLessThanOrEquals(max));
+        }
+
+        List<Product> listOfProducts = productService.getProductsWithPaginationAndFiltering(spec, PageRequest.of(0, 10)).getContent();
+
         model.addAttribute("filter", filter);
-        model.addAttribute("filter", min);
-        model.addAttribute("filter", max);
+        model.addAttribute("min", min);
+        model.addAttribute("max", max);
+        model.addAttribute("products", listOfProducts);
+        model.addAttribute("product", product);
         return "products";
     }
     @PostMapping
@@ -37,7 +57,9 @@ public class ProductsController {
         String filter = null;
         Integer min = null;
         Integer max = null;
-        model.addAttribute("products", productService.getAllProductsFiltered(filter, min, max));
+        Specification<Product> spec = Specification.where(null);
+        List<Product> listOfProducts = productService.getProductsWithPaginationAndFiltering(spec, PageRequest.of(0, 10)).getContent();
+        model.addAttribute("products", listOfProducts);
         model.addAttribute("product", product);
         model.addAttribute("filter", filter);
         model.addAttribute("filter", min);
@@ -50,37 +72,37 @@ public class ProductsController {
         model.addAttribute("product", product);
         return "products-edit";
     }
-
-    @PostMapping("/edit/confirm")
-    public String editConfirm(@ModelAttribute(value="product") Product product) {
-        productService.saveEditedProduct(product);
-        return "redirect:/products";
-    }
-
-
+//
+//    @PostMapping("/edit/confirm")
+//    public String editConfirm(@ModelAttribute(value="product") Product product) {
+//        productService.saveEditedProduct(product);
+//        return "redirect:/products";
+//    }
+//
+//
     @GetMapping("/add")
     public String addProduct(Model model) {
         Product product = new Product();
         model.addAttribute("product", product);
         return "products-add";
     }
-
+//
     @PostMapping("/add/confirm")
     public String addConfirm(@ModelAttribute(value="product") Product product) {
         productService.saveProduct(product);
         return "redirect:/products";
     }
-
+//
     @GetMapping("/show_product/{id}")
     public String showOneProduct(Model model, @PathVariable(value="id") Long id) {
         Product product = productService.getProductById(id);
         model.addAttribute("product", product);
         return "product_page";
     }
-
+//
     @GetMapping("/delete/{id}")
     public String deleteProduct(@PathVariable(value="id") Long id) {
-        productService.deleteProductById(id);
+        productService.deleteById(id);
         return "redirect:/products";
     }
 

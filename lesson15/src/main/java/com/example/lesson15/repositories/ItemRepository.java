@@ -22,6 +22,6 @@ import java.util.List;
 //}
 @Repository
 public interface ItemRepository extends PagingAndSortingRepository<Item, Long>, JpaSpecificationExecutor<Item> {
-    List<ItemProjection> asdasd();
+
 }
 

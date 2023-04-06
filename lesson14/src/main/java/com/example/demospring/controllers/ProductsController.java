@@ -27,11 +27,11 @@ public class ProductsController {
         model.addAttribute("products", productService.getAllProductsFiltered(filter, min, max));
         model.addAttribute("product", product);
         model.addAttribute("filter", filter);
-        model.addAttribute("filter", min);
-        model.addAttribute("filter", max);
+        model.addAttribute("min", min);
+        model.addAttribute("max", max);
         return "products";
     }
-    @PostMapping
+    @PostMapping("/reset")
     public String showProductListReset(Model model) {
         Product product = new Product();
         String filter = null;
@@ -42,7 +42,7 @@ public class ProductsController {
         model.addAttribute("filter", filter);
         model.addAttribute("filter", min);
         model.addAttribute("filter", max);
-        return "products";
+        return "redirect:/products";
     }
     @GetMapping("/edit/{id}")
     public String showEditProduct(Model model, @PathVariable(value="id") Long id){
