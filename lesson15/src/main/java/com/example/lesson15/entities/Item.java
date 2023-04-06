@@ -26,4 +26,9 @@ public class Item {
         this.title = title;
         this.cost = cost;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Item [%d, %s, price - %d]", id, title, cost);
+    }
 }

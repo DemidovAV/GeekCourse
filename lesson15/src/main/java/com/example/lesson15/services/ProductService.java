@@ -1,7 +1,7 @@
 package com.example.lesson15.services;
 
 import com.example.lesson15.entities.Product;
-import com.example.lesson15.repositories.ProductRepository;
+import com.example.lesson15.repositories.ProductRepository1;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -10,15 +10,15 @@ import java.util.stream.Collectors;
 
 @Service
 public class ProductService {
-    private ProductRepository productRepository;
+    private ProductRepository1 productRepository1;
 
     @Autowired
-    public void setProductRepository(ProductRepository productRepository) {
-        this.productRepository = productRepository;
+    public void setProductRepository(ProductRepository1 productRepository1) {
+        this.productRepository1 = productRepository1;
     }
 
     public List<Product> getAllProductsFiltered(String filter, Integer min, Integer max) {
-        List<Product> preFilteredList = productRepository.finAll();
+        List<Product> preFilteredList = productRepository1.finAll();
         List<Product> afterFilteredList;
         if (filter != null) {
             afterFilteredList = preFilteredList.stream().filter(p-> p.getTitle().toLowerCase().contains(filter.toLowerCase())).collect(Collectors.toList());
@@ -37,23 +37,23 @@ public class ProductService {
     }
 
     public Product getProductById(Long id) {
-        return productRepository.findById(id);
+        return productRepository1.findById(id);
     }
 
     public Product getProductByTitle(String title) {
-        return productRepository.findByTitle(title);
+        return productRepository1.findByTitle(title);
     }
 
     public void saveProduct(Product product) {
-        productRepository.saveProduct(product);
+        productRepository1.saveProduct(product);
     }
 
     public void deleteProductById(Long id) {
-        productRepository.deleteProductById(id);
+        productRepository1.deleteProductById(id);
     }
 
     public void saveEditedProduct(Product product) {
-        productRepository.saveEditedProduct(product);
+        productRepository1.saveEditedProduct(product);
     }
 
 }
