@@ -62,8 +62,8 @@ public class ProductsController {
         model.addAttribute("products", listOfProducts);
         model.addAttribute("product", product);
         model.addAttribute("filter", filter);
-        model.addAttribute("filter", min);
-        model.addAttribute("filter", max);
+        model.addAttribute("min", min);
+        model.addAttribute("max", max);
         return "products";
     }
     @GetMapping("/edit/{id}")
@@ -73,11 +73,11 @@ public class ProductsController {
         return "products-edit";
     }
 //
-//    @PostMapping("/edit/confirm")
-//    public String editConfirm(@ModelAttribute(value="product") Product product) {
-//        productService.saveEditedProduct(product);
-//        return "redirect:/products";
-//    }
+    @PostMapping("/edit/confirm")
+    public String editConfirm(@ModelAttribute(value="product") Product product) {
+        productService.saveProduct(product);
+        return "redirect:/products";
+    }
 //
 //
     @GetMapping("/add")

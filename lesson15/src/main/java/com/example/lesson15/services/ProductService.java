@@ -33,7 +33,7 @@ public class ProductService {
 
     @Transactional(readOnly = true)
     public Product getProductById(Long id) {
-        return productRepository.findOne(ProductSpecs.findById(id)).get();
+        return productRepository.findOne(ProductSpecs.findById(id)).orElse(null);
     }
 
     @Transactional
