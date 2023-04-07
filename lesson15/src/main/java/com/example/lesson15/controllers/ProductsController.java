@@ -27,9 +27,13 @@ public class ProductsController {
 
     @GetMapping
     public String showProductList(Model model,
+                                  @RequestParam (value = "page", required = false) Integer page,
                                   @RequestParam(value = "filter", required = false) String filter,
                                   @RequestParam(value = "min", required = false) Integer min,
                                   @RequestParam(value = "max", required = false) Integer max) {
+        if (page == null) {
+            page = 1;
+        }
         Product product = new Product();
         Specification<Product> spec = Specification.where(null);
         if(min != null) {
@@ -42,7 +46,7 @@ public class ProductsController {
             spec = spec.and(ProductSpecs.priceLessThanOrEquals(max));
         }
 
-        List<Product> listOfProducts = productService.getProductsWithPaginationAndFiltering(spec, PageRequest.of(0, 10)).getContent();
+        List<Product> listOfProducts = productService.getProductsWithPaginationAndFiltering(spec, PageRequest.of(page - 1, 3)).getContent();
 
         model.addAttribute("filter", filter);
         model.addAttribute("min", min);
@@ -83,6 +87,7 @@ public class ProductsController {
     @GetMapping("/add")
     public String addProduct(Model model) {
         Product product = new Product();
+//        productService.setLastIdToProduct(product);
         model.addAttribute("product", product);
         return "products-add";
     }

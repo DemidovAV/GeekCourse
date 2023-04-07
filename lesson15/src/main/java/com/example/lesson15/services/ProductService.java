@@ -12,6 +12,7 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -46,9 +47,10 @@ public class ProductService {
         productRepository.save(product);
     }
 
-
-//    public void saveEditedProduct(Product product) {
-//        productRepository1.saveEditedProduct(product);
-//    }
+    public void setLastIdToProduct(Product product) {
+        List<Product> products = new ArrayList<>();
+        productRepository.findAll().forEach(products::add);
+        product.setId(products.stream().mapToLong(Product::getId).max().getAsLong() + 1);
+    }
 
 }
