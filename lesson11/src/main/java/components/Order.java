@@ -1,8 +1,10 @@
+package components;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.*;
-import org.hibernate.annotations.Cascade;
-import java.util.List;
+
+import components.Client;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

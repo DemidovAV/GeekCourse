@@ -18,9 +18,8 @@
 
         <property name="current_session_context_class">thread</property>
 
-        <mapping class="components.Product"/>
-        <mapping class="components.Client"/>
-        <mapping class="components.Order"/>
         <!--<property name="hibernate.hbm2ddl.auto">none</property>-->
+
+        <mapping class="components.Item"/>
     </session-factory>
 </hibernate-configuration>
